@@ -1,38 +1,46 @@
-html, body {
+body {
+    font-family:"Poppins", sans-serif ;
+}
+.container{
+    padding:10px;
+    border: 1px solid #BCB9B8;
     width:50%;
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    
 }
 
 
-.container {
-    width: 360px;
-    color: gray;
+.container .input{
+    width: 90%;
+    height:20px;
+    
 }
 
-#inputField{
-    width: 300px;
-    height: 46px;
-    border: 1px solid black;
-    outline:none;
-    font-size: 25px;
-    vertical-align: middle;
+.container .btn{
+    width: 50px;
+    height: 30px;
+   
+}
+.container ul{
+  list-style: none;
+  padding:0px;
+}
+.container li {
+    color:red;
 
 }
-#addToDo{
-    height:50px;
-    width:50px;
-    border:1px solid black;
-    vertical-align: middle;
-    font-size: 30px;
+.container li a{
+    float: right;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
 
 }
-.to-dos {
-    margin-top: 25px;
+.container #error{
+    color:red;
+    font-size: 14px;
+}
 
-}
-.paragraph-styling{
-    margin: 0;
-    cursor: pointer;
-    font-size:20px;
-}
+
+
+

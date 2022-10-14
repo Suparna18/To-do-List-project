@@ -1,17 +1,71 @@
-let addToDoButton = document.getElementById('addToDo');
-let toDoContainer = document.getElementById('toDoContainer');
-let inputField = document.getElementById('inputField');
-addToDoButton.addEventListener('click',function(){
-    var paragraph = document.createElement('p');
-    paragraph.classList.add('paragraph-styling');
-    paragraph.innerText = inputField.value;
-    toDoContainer.appendChild(paragraph);
-    inputField.value = "";
-    paragraph.addEventListener('Click',function(){
-        paragraph.styl.textDecoration = "line-through";
+function addMore(){
+    document.getElementById('error').innerHTML="";
 
-    })
-    paragraph.addEventListener('dblclick', function(){
-        toDoContainer.removechild(paragraph);
-    })
-})
+    let name=document.getElementById('name').value;
+    if(name==''){
+        document.getElementById('error').innerHTML="Please enter the value";
+    
+
+    }else{
+        let box= document.getElementById('box');
+
+        let li= document.createElement('li');
+        li.textContent=name;
+
+        let a = document.createElement('a');
+        a.textContent="X";
+        a.href="javascript : void(0)";
+        a.className="remove";
+        li.appendChild(a);
+
+        let pos= box.firstElementChild;
+       
+        if(pos==null){
+            box.appendChild(li);
+        }else{
+            box.insertBefore(li,pos);
+        }
+        }
+        document.getElementById('name').value="";
+    }
+    let btn=document.querySelector('ul');
+    btn.addEventListener('click', function(e){
+        let box= document.getElementById('box');
+        let li= e.target.parentNode;
+        box.removeChild(li);
+
+    });
+
+
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
